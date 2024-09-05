@@ -221,7 +221,7 @@ border: 1.0px solid black;</string>
       <string>적합 지역</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="crawling_button">
      <property name="geometry">
       <rect>
        <x>360</x>
@@ -241,16 +241,16 @@ color: black;
 border: 1.0px solid black;</string>
      </property>
      <property name="text">
-      <string>대출 금액</string>
+      <string>개발자</string>
      </property>
     </widget>
    </widget>
    <widget class="QLabel" name="welcome_label">
     <property name="geometry">
      <rect>
-      <x>490</x>
+      <x>420</x>
       <y>0</y>
-      <width>301</width>
+      <width>371</width>
       <height>71</height>
      </rect>
     </property>
@@ -261,54 +261,6 @@ border: 1.0px solid black;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>10</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: #f5f5f5;
-color: black;
-border: 1.0px solid black;</string>
-    </property>
-    <property name="text">
-     <string>더보기</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>0</y>
-      <width>71</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>더보기</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <zorder>frame_2</zorder>
-   <zorder>welcome_label</zorder>
-   <zorder>label_11</zorder>
-   <zorder>pushButton_5</zorder>
   </widget>
   <widget class="QFrame" name="frame_3">
    <property name="geometry">

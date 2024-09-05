@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 import sqlite3
 
-subscribe_ui = uic.loadUiType('subscribe.ui')[0]
+subscribe_ui = uic.loadUiType('/Users/hack/PycharmProjects/Project_1/Subscribe/subscribe.ui')[0]
 
 class SubScribe(QMainWindow, subscribe_ui):
     def __init__(self):
@@ -13,7 +13,7 @@ class SubScribe(QMainWindow, subscribe_ui):
         self.sb_subscribe.clicked.connect(self.printing)
         self.sb_back.clicked.connect(self.bye)
         # sqlite 데이터화
-        self.conn = sqlite3.connect('subscriber.db')
+        self.conn = sqlite3.connect('/Users/hack/PycharmProjects/Project_1/subscriber.db')
         self.cursor = self.conn.cursor()
         # 테이블 생성
         self.cursor.execute('''
@@ -23,7 +23,8 @@ class SubScribe(QMainWindow, subscribe_ui):
                     pw TEXT,
                     ans TEXT,
                     total_money INT,
-                    pay INT
+                    pay INT,
+                    univ TEXT
                 )
                 ''')
         self.conn.commit()
@@ -35,9 +36,10 @@ class SubScribe(QMainWindow, subscribe_ui):
         ans = self.sb_ansData.text()
         total_money = self.sb_moneyData.text()
         pay = self.sb_payData.text()
+        univ = self.sb_univ.text()
         if name and id and pw and ans and total_money and pay:
-            self.cursor.execute('INSERT INTO subscribers (name, id, pw, ans, total_money, pay) VALUES (?, ?, ?, ?, ?, ?)',
-                                (name, id, pw, ans, total_money, pay))
+            self.cursor.execute('INSERT INTO subscribers (name, id, pw, ans, total_money, pay, univ) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                                (name, id, pw, ans, total_money, pay, univ))
             self.conn.commit()
             QMessageBox.information(self, 'Success', 'Data saved successfully!')
         else:

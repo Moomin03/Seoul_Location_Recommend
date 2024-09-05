@@ -5,24 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1afa226-ec9e-484c-ad92-be18d363f185" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Project_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/After_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mapp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1_main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subscribe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financial_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/income_graph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/living_tip.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_topdata.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommend_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tip_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Background/make_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Background/prefer_location.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crawling/Crawling_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommend_page/recommend_locaton.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommend_page/recommend_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recommend_page/recommend_ui.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prepare_data/data_prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/After_Login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/After_login/After_Login.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/After_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/After_login/After_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/Project1_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Seoul_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/Map/Seoul_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subscribe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subscribe/Subscribe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawling/craw_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/financial_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/income_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/Income_graph/income_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/income_graph.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Income_graph/income_graph.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/korea_seoul_goo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/korea_seoul_goo.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/living_tip.py" beforeDir="false" afterPath="$PROJECT_DIR$/Background/living_tip.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Main/main.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_topdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/Background/main_topdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Map/map_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_page.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Map/map_page.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_homeData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommend_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommend_ui.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seoul.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/kr_seoul_dong_loc.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscribe.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Subscribe/subscribe.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscriber.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tip_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Background/tip_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,26 +68,44 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.After_login.executor": "Run",
+    "Python.Crawling_data.executor": "Run",
     "Python.Mapp.executor": "Run",
     "Python.Project1_main.executor": "Run",
     "Python.Subscribe.executor": "Run",
+    "Python.again.executor": "Run",
+    "Python.combine_prefer_recommend.executor": "Run",
+    "Python.craw_page.executor": "Run",
     "Python.current_price.executor": "Run",
+    "Python.data_prepare.executor": "Run",
     "Python.exp.executor": "Run",
     "Python.financial.executor": "Run",
     "Python.financial_page.executor": "Run",
     "Python.income_graph.executor": "Run",
     "Python.living_tip.executor": "Run",
     "Python.main_topdata.executor": "Run",
+    "Python.make_file.executor": "Run",
     "Python.map.executor": "Run",
     "Python.map_page.executor": "Run",
     "Python.new.executor": "Run",
+    "Python.prefer_location.executor": "Run",
+    "Python.recommend_locaton.executor": "Run",
     "Python.recommend_page.executor": "Run",
+    "Python.tip_page.executor": "Run",
     "Python.ㅓㅓ.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Recommend_page" />
+      <recent name="$PROJECT_DIR$/Background" />
+      <recent name="$PROJECT_DIR$/csv" />
+      <recent name="$PROJECT_DIR$/Main" />
+      <recent name="$PROJECT_DIR$/prepare_data" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -88,5 +123,16 @@
       <updated>1725150676719</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

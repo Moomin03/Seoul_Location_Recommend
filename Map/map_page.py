@@ -7,9 +7,9 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QUrl
 from folium import Popup
 
-from financial_page import Preparing
+from prepare_data.data_prepare import Preparing
 
-map_uic = uic.loadUiType('./map_page.ui')[0]
+map_uic = uic.loadUiType('/Users/hack/PycharmProjects/Project_1/Map/map_page.ui')[0]
 
 class Mapping(QMainWindow, map_uic):
     def __init__(self):
@@ -20,9 +20,9 @@ class Mapping(QMainWindow, map_uic):
         self.mean_datas = Preparing()
         self.mean_wol_lot = self.mean_datas.dis_wol_alot()
         self.mean_wol_small= self.mean_datas.dis_wol_asmall()
-        self.maan_jeon_lot = self.mean_datas.dis_jeon_price()
+        self.mean_jeon_lot = self.mean_datas.dis_jeon_price()
         # 각 구 대표 위치 csv
-        self.goo_exact_csv = pd.read_csv('korea_seoul_goo.csv').sort_values('goo')
+        self.goo_exact_csv = pd.read_csv('/Users/hack/PycharmProjects/Project_1/csv/korea_seoul_goo.csv').sort_values('goo')
         self.goo_exact_lat = self.goo_exact_csv['lat'].to_list()
         self.goo_exact_long = self.goo_exact_csv['long'].to_list()
         self.goo_exact_name = self.goo_exact_csv['goo'].to_list()
@@ -40,7 +40,7 @@ class Mapping(QMainWindow, map_uic):
                       icon=folium.Icon(color='blue'),
                       popup='서울 시청').add_to(self.map)
         # 서울 구/동별 위도 경도 데이터 불러오기
-        self.total_data = pd.read_csv('./seoul.csv').dropna(how='any')
+        self.total_data = pd.read_csv('/Users/hack/PycharmProjects/Project_1/csv/kr_seoul_dong_loc.csv').dropna(how='any')
         # 각 구가 가지고 있는 데이터 딕셔너리화
         self.goo_data = dict(self.total_data.iloc[:, 0].value_counts())
         # 특정 구만 추출
@@ -102,7 +102,7 @@ class Mapping(QMainWindow, map_uic):
                               fill_opacity=0.2).add_to(self.map)
     def add_more(self):
         for i in zip(self.goo_exact_name, self.goo_exact_lat, self.goo_exact_long,
-                     self.maan_jeon_lot, self.mean_wol_lot, self.mean_wol_small):
+                     self.mean_jeon_lot, self.mean_wol_lot, self.mean_wol_small):
             title = i[0]
             jeon_lot = int(i[3])
             wol_lot = int(i[4])
@@ -164,11 +164,11 @@ class Mapping(QMainWindow, map_uic):
             ).add_to(self.map)
 
     def load_map(self):
-        html_file_path = '/Users/hack/PycharmProjects/Project_1/Seoul_map.html'
+        html_file_path = '/Users/hack/PycharmProjects/Project_1/Map/Seoul_map.html'
         self.web_view.setUrl(QUrl.fromLocalFile(html_file_path))
 
     def draw_map(self):
-        self.map.save('/Users/hack/PycharmProjects/Project_1/Seoul_map.html')
+        self.map.save('/Users/hack/PycharmProjects/Project_1/Map/Seoul_map.html')
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

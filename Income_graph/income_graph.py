@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sqlite3
 
-incomeGraph_ui = uic.loadUiType('income_graph.ui')[0]
+incomeGraph_ui = uic.loadUiType('/Users/hack/PycharmProjects/Project_1/Income_graph/income_graph.ui')[0]
 
 class IncomeGraph(QMainWindow, incomeGraph_ui):
     def __init__(self, usr_id):
@@ -18,7 +18,7 @@ class IncomeGraph(QMainWindow, incomeGraph_ui):
         self.show()
         self.usr_id = usr_id
 
-        conn = sqlite3.connect('subscriber.db')
+        conn = sqlite3.connect('/Users/hack/PycharmProjects/Project_1/subscriber.db')
         cursor = conn.cursor()
         query = 'SELECT name, total_money, pay FROM subscribers WHERE id=?'
         cursor.execute(query, (self.usr_id,))
@@ -50,7 +50,6 @@ class IncomeGraph(QMainWindow, incomeGraph_ui):
         layout.addWidget(self.canvas)
         self.widget_graph.setLayout(layout)
         self.canvas.draw()
-
         self.displaying()
 
     def displaying(self):

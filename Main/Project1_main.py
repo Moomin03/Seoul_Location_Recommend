@@ -1,26 +1,25 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
-from income_graph import IncomeGraph
-from PyQt5.QtCore import *
+from Subscribe.Subscribe import SubScribe
+from Background.main_topdata import weather_info, usmoney_info, krmoney_info
 from PyQt5.QtCore import QTimer
 import time
 import sqlite3
-from living_tip import livingTip
-from map_page import Mapping
-from tip_page import Tipcraw
-from recommend_page import RecommendPage
-afterLogin_ui = uic.loadUiType('After_Login.ui')[0]
+from After_login.After_login import AfMainWindow
+from Background.tip_page import Tipcraw
+from Background.living_tip import livingTip
 
-class AfMainWindow(QMainWindow, afterLogin_ui):
-    def __init__(self, user_id):
+main_ui = uic.loadUiType('/Users/hack/PycharmProjects/Project_1/Main/main.ui')[0]
+
+class MainWindow(QMainWindow, main_ui):
+    def __init__(self):
         super().__init__()
         self.setupUi(self)
-        # 전 페이지에서 user_id를 받아온다.
-        self.usr_id = user_id
-        # 뉴스 탭 불러오는 클래스
-        self.news = livingTip()
-        self.tip = Tipcraw()
+        # 다른 파일에서 가져오는 클래스
+        self.weather = weather_info()
+        self.usmoney = usmoney_info()
+        self.krmoney = krmoney_info()
 
         # LCD 타이머 설정
         self.lcd_timer = QTimer(self)
@@ -32,15 +31,16 @@ class AfMainWindow(QMainWindow, afterLogin_ui):
         self.blink_timer.start(500)  # 500ms = 0.5초마다 호출
         self.colon_visible = True
         self.update_lcd()
+        # 뉴스 탭 불러오는 클래스
+        self.news = livingTip()
+        self.tip = Tipcraw()
 
-        # 소득분위 페이지
-        self.m_incgraph.clicked.connect(self.open_incomeGraph)
-        # 사용자 데이터 인사~
-        self.welcome()
-        # 지도 띄우기
-        self.good_region.clicked.connect(self.open_map)
-        # 추천해주기
-        self.recommend_button.clicked.connect(self.open_recommend)
+        self.loginButton.clicked.connect(self.isitright)
+        self.subscribe_button.clicked.connect(self.open_subscribe)
+        self.m_weather.setText(self.weather.weather_dis())
+        self.m_temp.setText(self.weather.temper_dis())
+        self.us_money.setText(self.usmoney.usmoney())
+        self.kr_money.setText(self.krmoney.krmoney())
 
         # 뉴스 블록 처리. label은 for문 사용 불가능
         self.news_label1.setText('1. {}'.format(self.news.news_bre()[0]))
@@ -65,26 +65,34 @@ class AfMainWindow(QMainWindow, afterLogin_ui):
         self.tip_label9.setText('9. {}'.format(self.tip.get_data()[8]))
         self.tip_label10.setText('10. {}'.format(self.tip.get_data()[9]))
 
-    # 사용자 인사 함수
-    def welcome(self):
-        conn = sqlite3.connect('subscriber.db')
+    # 회원가입 페이지
+    def open_subscribe(self):
+        self.subscribe_page = SubScribe()
+    # 사용자 확인
+    def isitright(self):
+        id = self.id_input.toPlainText()
+        pw = self.pw_input.toPlainText()
+        # 데이터베이스 파일에 연결
+        conn = sqlite3.connect('/Users/hack/PycharmProjects/Project_1/subscriber.db')
         cursor = conn.cursor()
-        query = 'SELECT name FROM subscribers WHERE id= ?'
-        cursor.execute(query, (self.usr_id,))
+        # SQL 쿼리 작성
+        query = "SELECT * FROM subscribers WHERE id = ? AND pw = ?"
+        # 쿼리 실행
+        cursor.execute(query, (id, pw))
+        # 쿼리 결과 가져오기
         result = cursor.fetchone()
+        # 연결 종료
         conn.close()
-        self.welcome_label.setText(f'{result[0]}님!!! 만나서 반가워요~')
+        # 결과 반환
+        if result:
+            QMessageBox.information(self, 'Success', '환영합니다!')
+            self.openAfterpage(id) # ID와 비밀번호가 일치
+        else:
+            QMessageBox.information(self, 'Fail', '존재하지 않는 계정입니다!')
 
-    # 소득분위 페이지
-    def open_incomeGraph(self):
-        self.graph_page = IncomeGraph(self.usr_id)
-    # 지도 페이지
-    def open_map(self):
-        self.map_page = Mapping()
-    # 추천 페이지
-    def open_recommend(self):
-        self.recommend_page = RecommendPage(self.usr_id)
-
+    def openAfterpage(self, id):
+        self.after_login_window = AfMainWindow(id)
+        self.close()
     # lcd 칸
     def update_lcd(self):
         current_time = time.strftime('%H:%M')
@@ -99,6 +107,6 @@ class AfMainWindow(QMainWindow, afterLogin_ui):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    mainwindow = AfMainWindow()
+    mainwindow = MainWindow()
     mainwindow.show()
-    app.exec()
+    app.exec_()
