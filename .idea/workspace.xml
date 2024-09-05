@@ -5,41 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1afa226-ec9e-484c-ad92-be18d363f185" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Background/make_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Background/prefer_location.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Crawling/Crawling_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommend_page/recommend_locaton.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommend_page/recommend_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recommend_page/recommend_ui.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prepare_data/data_prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/After_Login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/After_login/After_Login.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/After_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/After_login/After_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/Project1_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Seoul_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/Map/Seoul_map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subscribe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Subscribe/Subscribe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawling/craw_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financial_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/income_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/Income_graph/income_graph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/income_graph.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Income_graph/income_graph.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/korea_seoul_goo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/korea_seoul_goo.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/living_tip.py" beforeDir="false" afterPath="$PROJECT_DIR$/Background/living_tip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Main/main.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_topdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/Background/main_topdata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Map/map_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map_page.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Map/map_page.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/real_homeData.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_ui.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seoul.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv/kr_seoul_dong_loc.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscribe.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Subscribe/subscribe.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriber.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tip_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Background/tip_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/make_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/Background/make_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map/Seoul_map.html" beforeDir="false" afterPath="$PROJECT_DIR$/Map/Seoul_map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_data5.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
